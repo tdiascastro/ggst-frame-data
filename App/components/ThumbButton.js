@@ -1,7 +1,7 @@
 import {Image, TouchableOpacity} from "react-native";
 import React from "react";
 
-export const PortaitButton = ({source}) => {
+export const ThumbButton = ({source}) => {
     return (
         <TouchableOpacity onPress={() => alert('todo!')}>
             <Image
