@@ -1,5 +1,5 @@
 import React from 'react';
 
-import RosterHome from './screens/RosterHome'
+import Navigation from "./config/Navigation";
 
-export default () => <RosterHome />;
+export default () => <Navigation />;

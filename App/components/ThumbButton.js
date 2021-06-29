@@ -1,13 +1,14 @@
 import {Image, TouchableOpacity} from "react-native";
 import React from "react";
 
-export const ThumbButton = ({source}) => {
+export const ThumbButton = ({navigation, source, characterName}) => {
     return (
-        <TouchableOpacity onPress={() => alert('todo!')}>
+        <TouchableOpacity onPress={() => navigation.push('RosterDetail', {
+            characterName,
+        })}>
             <Image
                 source={source}
                 resizeMode={'contain'}
-                onButtonPress={() => alert('todo!')}
             />
         </TouchableOpacity>
     )
