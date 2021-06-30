@@ -1,14 +1,14 @@
 import React from "react";
-import {Dimensions, Image, StyleSheet, View} from "react-native";
-import colors from "../constants/Colors";
-import CharacterInfo from "../util/CharactersGet";
+import {Dimensions, ScrollView, StyleSheet, View} from "react-native";
+import Colors from "../constants/Colors";
+import CharactersDetails from "../components/CharacterDetails";
 
 const screen = Dimensions.get('window')
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.eerieBlack,
+        backgroundColor: Colors.eerieBlack,
         flexDirection: 'row',
     },
     image: {
@@ -21,13 +21,11 @@ const styles = StyleSheet.create({
 export default ({route}) => {
     return (
         <View style={styles.container}>
-            <Image
-                style={styles.image}
-                source={require('../assets/characters/portaits/293px-GGST_Nagoriyuki_Portrait.png')}
-            />
-            <CharacterInfo
-                name={route.params.characterName}
-            />
+            <ScrollView>
+                <CharactersDetails
+                    characterName={route.params.characterName}
+                />
+            </ScrollView>
         </View>
     );
 };
